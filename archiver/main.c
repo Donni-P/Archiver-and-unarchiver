@@ -17,6 +17,7 @@ void archKat(FILE *archive,char *path,int num){
         scanf("%s",path);
         K = opendir(path);
     }
+    if(num != 0) fprintf(archive,"\n");
     fprintf(archive,"=========> Каталог №%d %s",num,strrchr(path,'/')+1);
     strcat(path,"/");
     strcpy(pathf,path);
